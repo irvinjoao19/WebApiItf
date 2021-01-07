@@ -1,0 +1,9 @@
+D:\VISUAL\ProyectoITF\WebApi\Negocio\bin\Release\Negocio.dll
+D:\VISUAL\ProyectoITF\WebApi\Negocio\bin\Release\Negocio.pdb
+D:\VISUAL\ProyectoITF\WebApi\Negocio\bin\Release\Entidades.dll
+D:\VISUAL\ProyectoITF\WebApi\Negocio\bin\Release\Entidades.pdb
+D:\VISUAL\ProyectoITF\WebApi\Negocio\obj\Release\Negocio.csprojAssemblyReference.cache
+D:\VISUAL\ProyectoITF\WebApi\Negocio\obj\Release\Negocio.csproj.CoreCompileInputs.cache
+D:\VISUAL\ProyectoITF\WebApi\Negocio\obj\Release\Negocio.csproj.CopyComplete
+D:\VISUAL\ProyectoITF\WebApi\Negocio\obj\Release\Negocio.dll
+D:\VISUAL\ProyectoITF\WebApi\Negocio\obj\Release\Negocio.pdb

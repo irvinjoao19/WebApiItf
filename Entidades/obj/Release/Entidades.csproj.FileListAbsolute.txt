@@ -1,0 +1,6 @@
+D:\VISUAL\ProyectoITF\WebApi\Entidades\bin\Release\Entidades.dll
+D:\VISUAL\ProyectoITF\WebApi\Entidades\bin\Release\Entidades.pdb
+D:\VISUAL\ProyectoITF\WebApi\Entidades\obj\Release\Entidades.csprojAssemblyReference.cache
+D:\VISUAL\ProyectoITF\WebApi\Entidades\obj\Release\Entidades.csproj.CoreCompileInputs.cache
+D:\VISUAL\ProyectoITF\WebApi\Entidades\obj\Release\Entidades.dll
+D:\VISUAL\ProyectoITF\WebApi\Entidades\obj\Release\Entidades.pdb
