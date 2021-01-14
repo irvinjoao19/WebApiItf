@@ -32,6 +32,7 @@ namespace Entidades
         public string visitadoPor { get; set; }
         public string direccion { get; set; }
         public string nombreCompleto { get; set; }
+        public int tipoVisitaId { get; set; }
         public List<MedicoDireccion> direcciones { get; set; }
     }
 }

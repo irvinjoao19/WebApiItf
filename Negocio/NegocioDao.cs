@@ -679,7 +679,8 @@ namespace Negocio
                                         direccion = drDo.GetString(19),
                                         usuarioId = drDo.GetInt32(20),
                                         nombreCompleto = drDo.GetString(21),
-                                        medicoSolId = 0
+                                        tipoVisitaId = drDo.GetInt32(22),
+                                        medicoSolId = 0,
                                     };
 
 
@@ -941,6 +942,7 @@ namespace Negocio
                                             e.direccion = drDo.GetString(19);
                                             e.usuarioId = drDo.GetInt32(20);
                                             e.nombreCompleto = drDo.GetString(21);
+                                            e.tipoVisitaId = drDo.GetInt32(22);
                                             e.medicoSolId = s.solMedicoId;
 
 
@@ -1591,6 +1593,7 @@ namespace Negocio
                                 usuarioId = drDo.GetInt32(19),
                                 direccion = drDo.GetString(20),
                                 nombreCompleto = drDo.GetString(21),
+                                tipoVisitaId = drDo.GetInt32(22),
                                 medicoSolId = 0
                             };
 
@@ -1631,6 +1634,25 @@ namespace Negocio
                             e.Add(m);
                         }
                         s.medicos = e;
+                    }
+
+                    SqlCommand cmdTV = con.CreateCommand();
+                    cmdTV.CommandTimeout = 0;
+                    cmdTV.CommandType = CommandType.StoredProcedure;
+                    cmdTV.CommandText = "SP_PROY_W_TIPO_VISITA_COMBO";
+                    SqlDataReader drTV = cmdTV.ExecuteReader();
+                    if (drTV.HasRows)
+                    {
+                        List<TipoVisita> e = new List<TipoVisita>();
+                        while (drTV.Read())
+                        {
+                            e.Add(new TipoVisita()
+                            {
+                                tipoVisitaId = drTV.GetInt32(0),
+                                descripcion = drTV.GetString(1)                              
+                            });
+                        }
+                        s.tipoVisita = e;
                     }
 
                     con.Close();
@@ -2151,6 +2173,7 @@ namespace Negocio
                     cmd.Parameters.Add("@TELEFONO_MEDICO", SqlDbType.VarChar).Value = x.telefono;
                     cmd.Parameters.Add("@ESTADO", SqlDbType.Int).Value = x.estado;
                     cmd.Parameters.Add("@USUARIO_CREACION", SqlDbType.Int).Value = x.usuarioId;
+                    cmd.Parameters.Add("@TIPOVISITA", SqlDbType.Int).Value = x.tipoVisitaId;
                     SqlDataReader dr = cmd.ExecuteReader();
                     if (dr.HasRows)
                     {
@@ -2896,7 +2919,6 @@ namespace Negocio
                 throw e;
             }
         }
-
         public static List<RptDiario> Rpt_RRMM_RESUMEN_DIARIO(int cicloId, int usuarioId)
         {
 
@@ -2994,7 +3016,6 @@ namespace Negocio
                 throw e;
             }
         }
-
         public static List<RptDiario> Rpt_SUP_RESUMEN_DIARIO(int cicloId, int usuarioId)
         {
 

@@ -18,5 +18,6 @@ namespace Entidades
         public List<Ubigeo> ubigeos { get; set; }        
         public List<Medico> medicos { get; set; }
         public List<Visita> visitas { get; set; }
+        public List<TipoVisita> tipoVisita { get; set; }
     }
 }
